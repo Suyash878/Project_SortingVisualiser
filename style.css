@@ -1,0 +1,26 @@
+#container 
+{
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+h1 
+{
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bar 
+{
+    width: 10px;
+    background-color: black;
+    border: 2px solid white;
+}
