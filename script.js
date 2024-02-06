@@ -49,20 +49,26 @@ function animate(swaps)
     const [i,j] = swaps.shift();
     [array[i],array[j]] = [array[j],array[i]];
     showBars([i,j]);
-    setTimeout(function(){animate(swaps);},50);
+    setTimeout(function(){animate(swaps);},20);
 }
 
-function showBars()
+function showBars(indices)
 {
 container.innerHTML = ""; //clears the present values so that the next ones can appear. otherwise they keep appearing next to each other.
 for(let i = 0 ; i < array.length ; i++)
 {
     const bar = document.createElement("div");
     bar.style.height = array[i]*100+"%";
-    bar.style.width = "10px";
-    bar.style.backgroundColor = "black";
+    bar.style.width = "30px";
+    bar.style.backgroundColor = "yellow";
     bar.classList.add("bar");
-    container.appendChild(bar);
+    
 
+    if(indices && indices.includes(i))
+    {
+        bar.style.backgroundColor = "red";
+    }
+
+    container.appendChild(bar);
 }
 }
